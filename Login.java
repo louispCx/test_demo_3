@@ -23,8 +23,9 @@ class Login
             String token = request.getParameter("password");
             String mfa = request.getParameter("mfa");
 
-            //String sql = "select * from users where (email ='" + email +"' and password ='" + token + "')";
-            String sql = "select * from users where (email ='" + email + "' and password ='" + token +"' and mfa ='" + mfa + "')";
+            String sql = "select * from users where (email ='" + email +"' and password ='" + token + "')";
+            //String sql = "select * from users where (email ='" + "' and password ='" + token + "')";
+
 
             Connection connection = pool.getConnection();
             Statement statement = connection.createStatement();
