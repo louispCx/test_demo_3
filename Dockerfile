@@ -7,3 +7,6 @@ RUN apt-get update ; apt-get install maven default-jdk -y ; update-alternatives 
 RUN mvn clean package ; cp target/*.war /usr/local/tomcat/webapps/
 
 CMD ["catalina.sh","run"]
+
+RUN useradd user01
+USER user01
